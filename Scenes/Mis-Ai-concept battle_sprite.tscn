@@ -18,6 +18,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmy6b"]
+size = Vector2(21.818186, 60.387123)
+
 [node name="MisAiConcept" type="CharacterBody2D" unique_id=2134584201]
 script = ExtResource("1_sarml")
 
@@ -26,3 +29,8 @@ top_level = true
 position = Vector2(16, -82.00001)
 scale = Vector2(0.45833334, 0.43055555)
 sprite_frames = SubResource("SpriteFrames_oe4ip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=132879011]
+position = Vector2(16, -84)
+scale = Vector2(0.45833334, 0.4305555)
+shape = SubResource("RectangleShape2D_fmy6b")

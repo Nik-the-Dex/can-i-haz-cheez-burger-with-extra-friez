@@ -2,9 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://dvyyy3epvhdx4" path="res://Assets/protagstanf.png" id="1_78sco"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmy6b"]
+size = Vector2(44.993935, 60.805607)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=223113320]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=668661965]
 position = Vector2(12.53125, -14.156252)
 scale = Vector2(0.6445313, 0.5756048)
 texture = ExtResource("1_78sco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1316827629]
+position = Vector2(13.5, -14)
+scale = Vector2(0.6445313, 0.5756048)
+shape = SubResource("RectangleShape2D_fmy6b")
