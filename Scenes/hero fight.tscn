@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://mbl4cktidsru"]
+
+[ext_resource type="Texture2D" uid="uid://dvyyy3epvhdx4" path="res://Assets/protagstanf.png" id="1_78sco"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=223113320]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=668661965]
+position = Vector2(12.53125, -14.156252)
+scale = Vector2(0.6445313, 0.5756048)
+texture = ExtResource("1_78sco")

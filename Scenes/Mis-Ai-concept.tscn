@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cehp35vla2spe"]
 
 [ext_resource type="Texture2D" uid="uid://wb21eypkpkww" path="res://Assets/intitial_protag.png" id="1_itd1f"]
+[ext_resource type="Script" uid="uid://crqvkk0qmal8g" path="res://Scripts/mis_ai_concept.gd" id="1_scjtq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_scjtq"]
 atlas = ExtResource("1_itd1f")
@@ -17,15 +18,31 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmy6b"]
+size = Vector2(20, 59)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmy6b"]
 radius = 15.0
 height = 64.0
 
 [node name="MisAiConcept" type="CharacterBody2D" unique_id=2134584201]
+script = ExtResource("1_scjtq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=183807444]
+top_level = true
+position = Vector2(0, -38)
 sprite_frames = SubResource("SpriteFrames_oe4ip")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28477249]
-position = Vector2(0, -4)
+[node name="Area2D" type="Area2D" parent="." unique_id=396242363]
+position = Vector2(0, -41)
+
+[node name="battleZone" type="CollisionShape2D" parent="Area2D" unique_id=681320770]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_fmy6b")
+
+[node name="body" type="CollisionShape2D" parent="." unique_id=28477249]
+top_level = true
+position = Vector2(0, -41)
 shape = SubResource("CapsuleShape2D_fmy6b")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

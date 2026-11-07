@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://2050re17v1i8"]
+
+[ext_resource type="Script" uid="uid://crqvkk0qmal8g" path="res://Scripts/mis_ai_concept.gd" id="1_sarml"]
+[ext_resource type="Texture2D" uid="uid://wb21eypkpkww" path="res://Assets/intitial_protag.png" id="2_o7oal"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scjtq"]
+atlas = ExtResource("2_o7oal")
+region = Rect2(0, 0, 24, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe4ip"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scjtq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MisAiConcept" type="CharacterBody2D" unique_id=2134584201]
+script = ExtResource("1_sarml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=183807444]
+top_level = true
+position = Vector2(16, -82.00001)
+scale = Vector2(0.45833334, 0.43055555)
+sprite_frames = SubResource("SpriteFrames_oe4ip")

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b71sbnlp727mf"]
+
+[ext_resource type="Texture2D" uid="uid://d330myp8n8uq1" path="res://Assets/sprishiememe.png" id="1_l8d8w"]
+[ext_resource type="Script" uid="uid://cwjl265rwx54b" path="res://Scripts/evil.gd" id="1_lxu1b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxu1b"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(6336, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh87a"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(7920, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcnlc"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(9504, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmon1"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(11088, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3u0k"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(0, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vteer"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(1584, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jtyu"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(3168, 0, 1584, 1584)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae3ba"]
+atlas = ExtResource("1_l8d8w")
+region = Rect2(4752, 0, 1584, 1584)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvnfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxu1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh87a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcnlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmon1")
+}],
+"loop": 1,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3u0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vteer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jtyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae3ba")
+}],
+"loop": 1,
+"name": &"good",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1885060091]
+script = ExtResource("1_lxu1b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=605721453]
+scale = Vector2(0.0049715904, 0.0048137605)
+sprite_frames = SubResource("SpriteFrames_qvnfa")
+animation = &"bad"
+frame = 3
+frame_progress = 0.9220404
