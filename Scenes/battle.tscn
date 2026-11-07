@@ -48,7 +48,7 @@ texture = ExtResource("1_pd5xk")
 [sub_resource type="TileSet" id="TileSet_fmy6b"]
 sources/1 = SubResource("TileSetAtlasSource_k7mbx")
 
-[node name="Node2D" type="Node2D" unique_id=837703639]
+[node name="battle_sprite" type="Node2D" unique_id=837703639]
 position = Vector2(0, -1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1348572374]
