@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cehp35vla2spe"]
+
+[ext_resource type="Texture2D" uid="uid://wb21eypkpkww" path="res://Assets/intitial_protag.png" id="1_itd1f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scjtq"]
+atlas = ExtResource("1_itd1f")
+region = Rect2(0, 0, 24, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe4ip"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scjtq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmy6b"]
+radius = 15.0
+height = 64.0
+
+[node name="MisAiConcept" type="CharacterBody2D" unique_id=2134584201]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=183807444]
+sprite_frames = SubResource("SpriteFrames_oe4ip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28477249]
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_fmy6b")

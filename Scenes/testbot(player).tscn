@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dqhfhoyqwlxrd"]
+
+[ext_resource type="Script" uid="uid://bxsxut3qvnebs" path="res://Scripts/testbot(player)S.gd" id="1_oe4ip"]
+[ext_resource type="Texture2D" uid="uid://5tgmrxc6oces" path="res://Assets/sprit_protag3.png" id="2_oe4ip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pswoo"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1jh0"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajw2g"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cdu0"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mila"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eat7y"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv14j"]
+atlas = ExtResource("2_oe4ip")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvnfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pswoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1jh0")
+}],
+"loop": 1,
+"name": &"down",
+"speed": 3.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajw2g")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cdu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mila")
+}],
+"loop": 1,
+"name": &"side walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eat7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv14j")
+}],
+"loop": 1,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmy6b"]
+radius = 11.0
+
+[node name="testbot(player)" type="CharacterBody2D" unique_id=625850981]
+script = ExtResource("1_oe4ip")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601404136]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_qvnfa")
+animation = &"side walk"
+frame_progress = 0.60190517
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2043583708]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_fmy6b")
